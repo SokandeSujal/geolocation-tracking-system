@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeoGuardian - Simple Geofencing</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-brand">
+        <i class="fas fa-map-marker-alt"></i>
+        GeoGuardian
+      </div>
+      <div class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#tracker">Tracker</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <section id="home" class="section hero">
+      <div class="hero-content">
+        <h1>Welcome to GeoGuardian</h1>
+        <p>Advanced Geofencing Solutions for Peace of Mind</p>
+        <a href="#tracker" class="cta-button">Get Started</a>
+      </div>
+      <div class="hero-waves"></div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>Understanding Geofencing</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <i class="fas fa-map-marked-alt"></i>
+            <h3>What is Geofencing?</h3>
+            <p>
+              Geofencing creates virtual boundaries around physical locations
+              for enhanced monitoring.
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-bell"></i>
+            <h3>Real-time Alerts</h3>
+            <p>
+              Receive instant notifications when monitored subjects enter or
+              leave designated areas.
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-history"></i>
+            <h3>Location History</h3>
+            <p>
+              Track and review historical location data with detailed timestamps
+              and zones.
+            </p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Security First</h3>
+            <p>
+              Enhanced security measures to protect sensitive location data.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tracker" class="section">
+      <div class="container">
+        <h2>Location Tracker</h2>
+        <div class="tracker-grid">
+          <div class="map-container">
+            <div id="map" style="height: 400px"></div>
+            <!-- Distance Scale Indicator -->
+            <div class="distance-scale" id="distance-scale"></div>
+            <!-- Cardinal Direction Indicators -->
+            <div class="direction-indicators" id="direction-indicators"></div>
+          </div>
+          <div class="status-panel">
+            <div class="status-card">
+              <h3>Current Status</h3>
+              <div id="status-text">Initializing...</div>
+            </div>
+            <div class="history-card">
+              <h3>Recent Activity</h3>
+              <div id="location-history"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="coordinates" class="section">
+      <div class="container">
+        <h2>Check Location</h2>
+        <div class="coordinate-input">
+          <div class="input-group">
+            <label for="latitude">Latitude:</label>
+            <input
+              type="number"
+              id="latitude"
+              step="any"
+              placeholder="Enter latitude"
+            />
+          </div>
+          <div class="input-group">
+            <label for="longitude">Longitude:</label>
+            <input
+              type="number"
+              id="longitude"
+              step="any"
+              placeholder="Enter longitude"
+            />
+          </div>
+          <button id="check-location">Check Location</button>
+          <button id="use-current-location">Use Current Location</button>
+        </div>
+        <div class="visualization">
+          <div class="status-panel">
+            <div class="status-card">
+              <h3>Current Status</h3>
+              <div id="status-text">Enter coordinates to check status</div>
+            </div>
+            <div class="info-card">
+              <h3>Location Info</h3>
+              <div id="location-info">No location data</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>GeoGuardian</h3>
+            <p>Advanced geofencing solutions for modern safety needs.</p>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#tracker">Tracker</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer-section">
+            <h3>Connect</h3>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          © 2024 GeoGuardian. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <button class="scroll-top" id="scroll-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
