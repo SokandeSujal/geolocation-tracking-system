@@ -18,19 +18,20 @@ A web-based application that tracks the user's location and displays it on an in
 - CSS
 - JavaScript
 - SVG (for the map)
+- Python (for hosting)
 
 ## Getting Started
 
 ### Prerequisites
 
-- A modern web browser that supports the Geolocation API.
+- Python 3.x installed on your system.
 
 ### Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/geolocation-tracking.git
+   git clone https://github.com/SokandeSujal/geolocation-tracking-system.git
    ```
 
 2. Navigate to the project directory:
@@ -39,7 +40,19 @@ A web-based application that tracks the user's location and displays it on an in
    cd geolocation-tracking
    ```
 
-3. Open `index.html` in your web browser.
+3. Run the following Python code to start the server:
+
+   ```bash
+   python -m http.server
+   ```
+
+4. After running the command, you will see output similar to the following, indicating the URL where the application is hosted:
+
+   ```
+   Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+   ```
+
+5. Open your web browser and navigate to the provided URL (e.g., `http://localhost:8000` or `http://your_ip_address:8000`).
 
 ## Usage
 
